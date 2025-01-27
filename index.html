@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>WeThere</title>
   </head>
@@ -10,14 +14,52 @@
     <section class="work-area">
       <div class="container">
         <div class="main">
-          <div class="search"></div>
-          <div class="main-location"></div>
+          <div class="search">
+            <input type="text" id="searchInput" placeholder="Search City" />
+            <button type="button"><i class="fa fa-search"></i></button>
+          </div>
+          <div class="main-location">
+            <div class="current-info">
+              <div class="date-location">
+                <p id="current-date">mon, jan 23, 2025 -- 12:00 pm</p>
+                <h2 id="location">rabat</h2>
+              </div>
+              <div class="weather-info">
+                <div class="weather-icon" id="weather-icon">
+                  <i class="fa fa-sun-o"></i>
+                </div>
+                <div class="weather-details">
+                  <p class="temp">temp: <span id="temperature">30</span>°C</p>
+                  <p class="wind">wind: <span id="wind-speed">10</span> mps</p>
+                  <p class="humidity">hum: <span id="humidity">10</span>%</p>
+                </div>
+              </div>
+              <div class="climate-note">
+                <p>
+                  Rising temps, unpredictable rain, and extreme weather—climate
+                  change is reshaping our planet.
+                </p>
+                <button id="add-favorite">+ add to favorites</button>
+              </div>
+            </div>
+            <div class="hourly-forecast">
+              <h3>Hourly Forecast</h3>
+              <div class="hours" id="hourly-list"></div>
+            </div>
+          </div>
         </div>
         <div class="not-main">
-          <div class="favorites"></div>
-          <div class="weekly-forecast"></div>
+          <div class="weekly-forecast">
+            <h3>weekly forecast</h3>
+            <div class="forecast-list" id="weekly-list"></div>
+          </div>
+          <div class="favorites">
+            <h3>+ favorites</h3>
+            <div class="favorites-list" id="favorites-list"></div>
+          </div>
         </div>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
